@@ -55,7 +55,7 @@ class List(object):
             return node.value
 
     def remove(self, term):  # searches for an item and removes it
-        current = self.begin  # NOT POP
+        current = self.begin  
 
         while current:
             if current.value == term:
@@ -106,7 +106,7 @@ class List(object):
 
     def _invariant(self):
         if self.begin == None:
-            assert self.end == None, "End set while begin is not." #mistake?
+            assert self.end == None, "End set while begin is not." 
 
         if self.begin:
             assert self.begin.prev == None, "Begin.prev not None"
@@ -124,14 +124,16 @@ class List(object):
 
 l = List()
 
-l.push("a")
-l.push("b")
-l.push("c")
+# Test Data
 
-print (l)
+# l.push("a")
+# l.push("b")
+# l.push("c")
 
-print (l.remove("a"))
+# print (l)
 
-print (l)
+# print (l.remove("a"))
 
-#print (l.get('c'))
+# print (l)
+
+# print (l.get('c'))
